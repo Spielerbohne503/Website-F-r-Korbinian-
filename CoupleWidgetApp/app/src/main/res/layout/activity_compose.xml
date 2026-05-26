@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark"
+    android:padding="16dp">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zurück"
+            android:textColor="@color/text_secondary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nachricht senden"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+    <!-- Image Preview -->
+    <ImageView
+        android:id="@+id/iv_preview"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:background="@color/bg_card"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Text Input -->
+    <EditText
+        android:id="@+id/et_message"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint="Schreib etwas..."
+        android:hintTextColor="@color/text_secondary"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@color/bg_card"
+        android:padding="14dp"
+        android:gravity="top|start"
+        android:inputType="textMultiLine|textCapSentences"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Pick Image Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_pick_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bild auswählen"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/bg_card"
+        app:cornerRadius="12dp"
+        app:icon="@android:drawable/ic_menu_gallery"
+        app:iconTint="@color/pink"
+        android:layout_marginBottom="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Send Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Senden"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:padding="14dp"
+        app:backgroundTint="@color/pink"
+        app:cornerRadius="24dp"
+        app:icon="@android:drawable/ic_menu_send"
+        app:iconTint="@color/white" />
+
+</LinearLayout>
